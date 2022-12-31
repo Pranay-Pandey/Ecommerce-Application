@@ -47,7 +47,7 @@ class Customer(models.Model):
     phone = models.SmallIntegerField()
     birth_date = models.DateField(null=True)
     membership = models.CharField(max_length=1, choices=MEMBER_CHOICES, default=MEMEBER_GOLD)
-    customer_order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    customer_order = models.ForeignKey(Order, on_delete=models.CASCADE , null=True)
 
 
 class Address(models.Model):

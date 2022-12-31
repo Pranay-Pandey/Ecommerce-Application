@@ -1,0 +1,14 @@
+<center><h1>Welcome to the landing page</h1></center>
+
+{% if name %}
+Welcome Pranay
+{% endif %}
+
+<ul>
+{% if customers %}
+TOTAL CUSTOMERS = {{len_customers}}
+{% for customer in customers %}
+<li>{{ customer.first_name }} {{ customer.last_name }}</li>
+{% endfor %}
+{% endif %}
+</ul>
