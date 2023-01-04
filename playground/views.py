@@ -7,6 +7,6 @@ from store.models import Customer
 # Create your views here.
 def home(request):
 
-    queryset = Customer.objects.filter(phone__gt=18000)
+    queryset = Customer.objects.filter(id__lt=47)
 
     return render(request, 'template/landingpage.html', {"name":"Pranay", 'customers':list(queryset) , 'len_customers':len(list(queryset))})
